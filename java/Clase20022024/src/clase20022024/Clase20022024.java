@@ -38,7 +38,7 @@ public class Clase20022024 {
             v[i] = v[i - 1] + v[i - 2];
         }
 
-        // Imprimos el vector resultante (invertido)
+        // Imprimos el vector resultante (con la sucesión de fibonacci)
         System.out.println("\nEl vector con la sucesión de Fibonacci es: ");
         for (i = 1; i <= n; i++) {
             System.out.print(v[i] + "|");
