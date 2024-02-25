@@ -27,7 +27,7 @@ public class BubbleSort {
         // Generamos datos aleatorios para el vector
         Random random = new Random();
         for (int i = 1; i <= n; i++) {
-            v[i] = random.nextInt(n+10); // Números aleatorios entre 0 y 99
+            v[i] = random.nextInt(n+10); // Números aleatorios entre 0 y n+10
         }
 
         // Imprimimos los datos del vector
