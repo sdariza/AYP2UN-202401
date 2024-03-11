@@ -63,7 +63,7 @@ public class ProductoMatrices {
                 }
             }
 
-            // Imprimos la matriz C = AB
+            // Imprimimos la matriz C = AB
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= q; j++) {
                     System.out.printf("%d|", C[i][j]);
