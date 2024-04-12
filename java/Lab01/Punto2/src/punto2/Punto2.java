@@ -28,14 +28,14 @@ public class Punto2 {
             }
 
             int s1 = 0, s2 = 0;
-            int AA[][] = new int[n + 1][n + 1];
+            int A[][] = new int[n + 1][n + 1];
             int B[][] = new int[n + 1][n + 1];
             int C[][] = new int[n + 1][n + 1];
 
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= n; j++) {
                     System.out.printf("Ingrese el elemento A[%d,%d]", i, j);
-                    AA[i][j] = input.nextInt();
+                    A[i][j] = input.nextInt();
                 }
             }
 
@@ -47,7 +47,7 @@ public class Punto2 {
                 }
             }
             for (int i = 1; i <= n; i++) {
-                s1 = s1 + AA[i][i];
+                s1 = s1 + A[i][i];
                 s2 = s2 + B[i][n - i + 1];
             }
 
@@ -58,13 +58,13 @@ public class Punto2 {
                 for (int i = 1; i <= n; i++) {
                     for (int j = 1; j <= n; j++) {
                         for (int k = 1; k <= n; k++) {
-                            C[i][j] = C[i][j] + AA[i][k] * B[k][j];
+                            C[i][j] = C[i][j] + A[i][k] * B[k][j];
                         }
-                        if (AA[i][j] % 2 == 0) {
+                        if (A[i][j] % 2 == 0) {
                             boolean sw = false;
                             int ii = 1;
                             while (!sw && ii <= p) {
-                                if (v[ii] == AA[i][j]) {
+                                if (v[ii] == A[i][j]) {
                                     sw = true;
                                 } else {
                                     ii++;
@@ -72,7 +72,7 @@ public class Punto2 {
                             }
                             if (!sw) {
                                 p++;
-                                v[p] = AA[i][j];
+                                v[p] = A[i][j];
                             }
                         }
 
@@ -113,12 +113,12 @@ public class Punto2 {
                 System.out.println("La sumatoria en A fue menor a la de B");
                 for (int i = 1; i <= n; i++) {
                     for (int j = 1; j <= n; j++) {
-                        C[i][j] = -AA[i][j] + B[i][j];
-                        if (AA[i][j] % 2 == 1) {
+                        C[i][j] = -A[i][j] + B[i][j];
+                        if (A[i][j] % 2 == 1) {
                             boolean sw = false;
                             int ii = 1;
                             while (!sw && ii <= p) {
-                                if (v[ii] == AA[i][j]) {
+                                if (v[ii] == A[i][j]) {
                                     sw = true;
                                 } else {
                                     ii++;
@@ -126,7 +126,7 @@ public class Punto2 {
                             }
                             if (!sw) {
                                 p++;
-                                v[p] = AA[i][j];
+                                v[p] = A[i][j];
                             }
                         }
 
@@ -167,9 +167,9 @@ public class Punto2 {
                 System.out.println("La sumatoria en A fue igual a la de B");
                 for (int i = 1; i <= n - 1; i++) {
                     for (int j = 1; j <= n - i; j++) {
-                        tt = AA[i][j];
-                        AA[i][j] = AA[n - j + 1][n - i + 1];
-                        AA[n - j + 1][n - i + 1] = tt;
+                        tt = A[i][j];
+                        A[i][j] = A[n - j + 1][n - i + 1];
+                        A[n - j + 1][n - i + 1] = tt;
                     }
                 }
                 for (int i = 2; i <= n; i++) {
@@ -183,7 +183,7 @@ public class Punto2 {
                 for (int i = 1; i <= n; i++) {
                     for (int j = 1; j <= n; j++) {
                         for (int k = 1; k <= n; k++) {
-                            C[i][j] = C[i][j] + AA[i][k] * B[k][j];
+                            C[i][j] = C[i][j] + A[i][k] * B[k][j];
                         }
                         int contDiv = 0, ii = 1;
                         while (ii <= C[i][j] && contDiv <= 2) {
