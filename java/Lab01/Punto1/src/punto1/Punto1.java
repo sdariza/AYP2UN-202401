@@ -140,11 +140,12 @@ public class Punto1 {
              * n+1<=i<=2n
              *
              * n+1<=j<=2n
+             *
+             * Z[i][j] <-- A[n - (j - n) + 1][n - (i - n) + 1];
              */
             for (int i = n + 1; i <= 2 * n; i++) {//límites en filas del IV cuadrante
                 for (int j = n + 1; j <= 2 * n; j++) {//límites en columnas del IV cuadrante
                     Z[i][j] = A[n - (j - n) + 1][n - (i - n) + 1];
-
                 }
             }
 
