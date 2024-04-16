@@ -52,7 +52,7 @@ public class Punto2 {
             }
 
             if (s1 > s2) {
-                int v[] = new int[(n + 1) * (n + 1)];
+                int v[] = new int[2 * (n + 1) * (n + 1)];
                 int p = 0;
                 System.out.println("La sumatoria en A fue mayor a la de B");
                 for (int i = 1; i <= n; i++) {
@@ -108,7 +108,7 @@ public class Punto2 {
                 System.out.println("");
 
             } else if (s1 < s2) {
-                int v[] = new int[(n + 1) * (n + 1)];
+                int v[] = new int[2 * (n + 1) * (n + 1)];
                 int p = 0;
                 System.out.println("La sumatoria en A fue menor a la de B");
                 for (int i = 1; i <= n; i++) {
@@ -161,7 +161,7 @@ public class Punto2 {
                 }
                 System.out.println("");
             } else {
-                int v[] = new int[(n + 1) * (n + 1)];
+                int v[] = new int[2 * (n + 1) * (n + 1)];
                 int p = 0;
                 int tt = 0;
                 System.out.println("La sumatoria en A fue igual a la de B");
